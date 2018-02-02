@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools { 
+        maven 'localMaven' 
+        jdk 'localJDK' 
+    }
     
     parameters { 
          string(name: 'tomcat_dev', defaultValue: '35.166.210.154', description: 'Staging Server')
